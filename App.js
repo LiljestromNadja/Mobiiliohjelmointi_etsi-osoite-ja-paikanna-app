@@ -10,23 +10,18 @@ export default function App() {
 
   const[location, setLocation] = useState(null);
   const [input, setInput] = useState('');
-  const [region, setRegion] = useState({
-    latitude: 60.200692,
-    longitude: 24.934302,
-    latitudeDelta: 0.0322,
-    longitudeDelta: 0.0221,
-  });
 
   const initialRegion = {
     latitude: 60.15524,
     longitude: 24.9117114,
     latitudeDelta: 0.0322,
     longitudeDelta: 0.0221
-};
+  };
+   
+  const [region, setRegion] = useState(initialRegion);
 
-const apitoken =  API_TOKEN;
-
-const url = `http://www.mapquestapi.com/geocoding/v1/address?key=${apitoken}&location=${input}`;
+  const apitoken =  API_TOKEN;
+  const url = `http://www.mapquestapi.com/geocoding/v1/address?key=${apitoken}&location=${input}`;
 
 const printTheTime = () => {
 
