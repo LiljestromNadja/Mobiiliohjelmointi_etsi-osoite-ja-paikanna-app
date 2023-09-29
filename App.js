@@ -32,7 +32,7 @@ const printTheTime = () => {
 
   let time = new Date();
 
-  let hours = time.getHours()+3;
+  let hours = time.getHours();
   let minutes = time.getMinutes();
   let seconds = time.getSeconds();
 
